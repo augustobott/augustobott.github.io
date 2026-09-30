@@ -41,4 +41,11 @@
         });
     });
 
+    // Close portfolio modal on Escape key press
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' || e.keyCode === 27) {
+            $('.portfolio-modal.modal:visible, .portfolio-modal.modal.in').modal('hide');
+        }
+    });
+
 })(jQuery); // End of use strict
